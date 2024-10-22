@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+   	padding: 0;
+   	margin: 50px;
+}
+.principal{
+    width: 100%;
+    height: 100%;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	justify-content: center;
+	align-items: center;
+    
+
+}
+.content {
+	height: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 25% 25% 25% 25%;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	-webkit-perspective: 700;
+    box-shadow: 0px 0px 5px black;
+}
+
+.content .imagenes{
+	height: 100%;
+	width: 100%;
+	position: relative;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+
+.content .imagenes:hover{
+	
+	transform: rotateY(180deg);	
+}
+
+.content .imagenes img{
+	height: 90%;
+	width: 90%;
+	backface-visibility: hidden;
+}
+
+
+.content .imagenes #fil1{
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	left: 6%;
+
+}
+
+.content .imagenes #fil2{
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	left: 31%;
+
+}
+
+.content .imagenes #fil3{
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	left: 56%;
+
+}
+
+.content .imagenes #fil4{
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	left: 79%;
+
+}
+
+.title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.title h1{
+	text-align: center;
+}
+
+.inicio .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 0 10px;
+}
+.inicio .contenido-seccion header{
+    padding: 30px;
+}
+
+.inicio .contenido-seccion header nav{
+    position: fixed;
+    margin-left: 60px;
+    background-color: #e6ffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 99;
+    display: none;
+}
+.inicio .contenido-seccion header nav a{
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.inicio .contenido-seccion header .logo{
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: "Yellowtail";
+    text-shadow: 0 0 35px #f0ff49;
+    color:red;
+}
+.inicio .contenido-seccion header .logo .color{
+    color: #000000;
+    font-family: "Yellowtail";
+}
+.inicio .contenido-seccion header .nav-bar{
+    position: fixed;
+    background-color: #93ff85;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.inicio .contenido-seccion header .nav-bar:hover{
+    box-shadow: 0 0 35px #fff;
+}
+
+
+
+
+
+#lightbox, #textLightbox{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	line-height: 0;
+	}
+
+#lightbox a img{ border: none; }
+#outerTextContainer{
+	position: relative;
+	background-color: #fff;
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	line-height:1.5em;
+	text-align:left;
+	padding:10px;	border:1px solid #000
+}
+
+#closeText{text-align:right}
+#bottomNav{margin-top:5px;text-align:right}
+
+#outerImageContainer{
+	position: relative;
+	background-color: #fff;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	}
+
+#imageContainer{
+	padding: 10px;
+	}
+
+#loading{
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+	}
+#hoverNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	}
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{
+	width: 49%;
+	height: 100%;
+	background: transparent url(../img/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	}
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(../img/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(../img/nextlabel.gif) right 15% no-repeat; }
+
+
+#imageDataContainer{
+	font: 10px Verdana, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 1.4em;
+	overflow: auto;
+	width: 100%	
+	}
+
+#imageData{	padding:0 10px; color: #666; }
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #caption{ font-weight: bold;	}
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em;	}	
+		
+#overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 500px;
+	background-color:#000000;
+	}
+	
+#libro img{
+	position: absolute;
+	z-index: 1;
+	height: 30px;
+	width: 30px;
+	left: 50px;
+}
+#libro {
+	position: absolute;
+	z-index: 1;
+	height: 30px;
+	width: 30px;
+	left: 220px;
+}
+
+
